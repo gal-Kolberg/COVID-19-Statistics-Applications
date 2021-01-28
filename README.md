@@ -26,13 +26,13 @@ this library is compiled as a separate .so and used by all first 3 C programs
     3. --country <country>
 
 Do the following actions:
-    	a. unzip "Exersice1" to an empty directory
+	a. unzip "Exersice1" to an empty directory
 	b. run through the bash terminal: chmod +x script
-    	c. go to the directory from above and run through the bash terminal (it will take a few minutes): ./script
-    	d. when all the file will be ready (you will get a message about it) run through the bash terminal: export LD_LIBRARY_PATH=`pwd`
-    	e. run through the bash terminal: make
-    	f. run through the bash terminal the executable programs with the formated parameters, for example: 
-        	./linuxq1.out --date 2020-04-25 --key Active
-        	./linuxq2.out --country india --key Deaths
-        	./linuxq3.out --country india
-    	g. run through the bash terminal: make clean
+	c. go to the directory from above and run through the bash terminal (it will take a few minutes): ./script
+	d. when all the file will be ready (you will get a message about it) run through the bash terminal: export LD_LIBRARY_PATH=`pwd`
+	e. run through the bash terminal: make
+	f. run through the bash terminal the executable programs with the formated parameters, for example: 
+		./linuxq1.out --date 2020-04-25 --key Active
+		./linuxq2.out --country india --key Deaths
+		./linuxq3.out --country india
+	g. run through the bash terminal: make clean
