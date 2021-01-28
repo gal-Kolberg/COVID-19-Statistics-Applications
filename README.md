@@ -32,7 +32,7 @@ this library is compiled as a separate .so and used by all first 3 C programs
 4) when all the file will be ready (you will get a message about it) run through the bash terminal: export LD_LIBRARY_PATH=`pwd`
 5) run through the bash terminal: make
 6) run through the bash terminal the executable programs with the formated parameters, for example: 
-	./linuxq1.out --date 2020-04-25 --key Active
-	./linuxq2.out --country india --key Deaths
-	./linuxq3.out --country india
+	1) ./linuxq1.out --date 2020-04-25 --key Active
+	2) ./linuxq2.out --country india --key Deaths
+	3) ./linuxq3.out --country india
 7) run through the bash terminal: make clean
