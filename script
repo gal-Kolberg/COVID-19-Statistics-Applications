@@ -1,0 +1,27 @@
+#!/bin/bash
+echo downloading all countries
+curl -s https://api.covid19api.com/countries >> countries1
+tr '\{' '\n' < countries1 >> temp
+grep -oP '(?<="Slug": ").*?(?=")' < temp > countries1
+rm temp
+mkdir Countries_Dir
+echo making file to each country
+input="./countries1"
+while IFS= read -r line; do
+	curl -s https://api.covid19api.com/total/country/$line >> $line
+	grep -oP '(?<=Lon":"0",).*?(?=})' < $line > temp
+	tr --delete \" < temp > temp2
+	tr , \\n < temp2 > $line
+	if [ ! -s $line ]	
+	then
+        rm -f $line
+	else
+		mv $line "Countries_Dir"
+		echo "$line" >> countries
+	fi
+	rm -f $line
+	rm temp
+	rm temp2
+done < $input
+rm countries1
+echo files are ready
